@@ -5,9 +5,7 @@ import axios from 'axios';
 const User = () => {
 
     const { id } = useParams();
-     
     const [user, setUser] = useState([]);
-
     const getUser = async () => {
         const replay = await axios.get(`https://jsonplaceholder.typicode.com/users/${id}`);
         const answer = await replay.data;
@@ -19,7 +17,6 @@ const User = () => {
     }, []);
 
 
-
     return ( 
         <Fragment>
             <div className="card">
@@ -28,6 +25,7 @@ const User = () => {
                         <p className="card-text"> username :  {user.username}</p>
                         <p className="card-text"> email : {user.email}</p>
                         <p className="card-text"> phone : {user.phone}</p>
+                        <p className="card-text"> website : {user.website}</p>
                     </div>
             </div>
         </Fragment> 
