@@ -16,12 +16,8 @@ function App() {
                   </div>
                 </nav>            
                 <Switch>
-                <Route exact path="/">
-                    <Users />
-                </Route>
-                <Route path="/usuario/:id">
-                    <User />
-                </Route>
+                  <Route exact path="/" component={Users} />                    
+                  <Route path="/usuario/:id" component={User} />                    
                 </Switch>
             </Router>
         </div>
